@@ -1,4 +1,5 @@
 deployment:
+    mode: decoupled
     role: control_plane
     role_control_plane:
         config_provider: etcd
