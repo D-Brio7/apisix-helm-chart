@@ -1,4 +1,5 @@
 deployment:
+    mode: decoupled
     role: data_plane
     role_data_plane:
        config_provider: etcd
