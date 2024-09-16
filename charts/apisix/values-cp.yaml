@@ -1,4 +1,15 @@
 deployment:
   mode: decoupled
   role: "control_plane" 
+
+  # -- used for control_plane deployment mode
+  controlPlane:
+    # -- conf Server address
+    confServerPort: "9280"
+    # -- secret name used by conf Server
+    certsSecret: "cp-secret"
+    # -- conf Server CA cert name
+    cert: "tls.crt"
+    # -- conf Server cert key name
+    certKey: "tls.key"
 #END
