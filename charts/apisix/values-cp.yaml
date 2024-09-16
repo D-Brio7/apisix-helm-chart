@@ -5,7 +5,7 @@ deployment:
       config_provider: etcd
   etcd:
      host:
-         - https://${etcd_IP}:${etcd_Port}
+         - http://${etcd_IP}:${etcd_Port}
      prefix: /apisix
      timeout: 30
   # # -- used for control_plane deployment mode
