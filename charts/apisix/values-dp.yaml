@@ -4,13 +4,13 @@ deployment:
   role_data_plane:
     config_provider: etcd
        
-  dataPlane:
-    controlPlane:
-      # -- The hosts of the control_plane used by the data_plane
-      host: ["https://apisix-cp.apisix.svc:9180"]
-      # -- The prefix of the control_plane used by the data_plane
-      prefix: "/apisix"
-      # -- Timeout when the data plane connects to the control plane
+  # dataPlane:
+  #   controlPlane:
+  #     # -- The hosts of the control_plane used by the data_plane
+  #     host: ["https://apisix-cp.apisix.svc:9180"]
+  #     # -- The prefix of the control_plane used by the data_plane
+  #     prefix: "/apisix"
+  #     # -- Timeout when the data plane connects to the control plane
 
   # # -- certs used for certificates in decoupled mode
   # certs:
