@@ -11,6 +11,8 @@ externalEtcd:
   host:
     # host or ip e.g. http://172.20.128.89:2379
     - http://apisix-cp.apisix.svc:2379
+  prefix:
+    - /apisix
        
   # dataPlane:
   #   controlPlane:
