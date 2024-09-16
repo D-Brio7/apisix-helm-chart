@@ -1,34 +1,30 @@
 deployment:
-   mode: decoupled
-   role: "data_plane"
-   role_data_plane:
-     config_provider: etcd
+  mode: decoupled
+  role: "data_plane"
+  role_data_plane:
+    config_provider: etcd
        
-   dataPlane:
-     controlPlane:
-       # -- The hosts of the control_plane used by the data_plane
-       host: ["https://apisix-control-plane.apisix.svc:9280"]
-       # -- The prefix of the control_plane used by the data_plane
-       prefix: "/apisix"
-       # -- Timeout when the data plane connects to the control plane
+  dataPlane:
+    controlPlane:
+      # -- The hosts of the control_plane used by the data_plane
+      host: ["https://apisix-control-plane.apisix.svc:9280"]
+      # -- The prefix of the control_plane used by the data_plane
+      prefix: "/apisix"
+      # -- Timeout when the data plane connects to the control plane
 
-   # -- certs used for certificates in decoupled mode
-   certs:
-     # -- secret name used for decoupled mode
-     certsSecret: "client-secret"
-     # -- cert name in certsSecret
-
-     cert: "tls.crt"
-     # -- cert key in certsSecret
-
-     cert_key: "tls.key"
- 
-     # -- trusted_ca_cert name in certsSecret
-
-     mTLSCACertSecret: "ca-secret"
-     # -- mTLS CA cert filename in mTLSCACertSecret
-
-     mTLSCACert: "ca.pem"
+  # -- certs used for certificates in decoupled mode
+  certs:
+    # -- secret name used for decoupled mode
+    certsSecret: "client-secret"
+    # -- cert name in certsSecret
+    cert: "tls.crt"
+    # -- cert key in certsSecret
+    cert_key: "tls.key"
+    # -- trusted_ca_cert name in certsSecret
+    mTLSCACertSecret: "ca-secret"
+    # -- mTLS CA cert filename in mTLSCACertSecret
+    mTLSCACert: "ca.pem"
+    
  etcd:
    # -- install etcd(v3) by default, set false if do not want to install etcd(v3) together
    enabled: false                 
