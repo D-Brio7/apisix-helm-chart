@@ -3,9 +3,14 @@ deployment:
   role: "data_plane"
   role_data_plane:
     config_provider: etcd
-  etcd:
-     host:
-         - https://etcd.host:2379
+  # etcd:
+  #    host:
+  #        - https://etcd.host:2379
+externalEtcd:
+  # -- if etcd.enabled is false, use external etcd, support multiple address, if your etcd cluster enables TLS, please use https scheme, e.g. https://127.0.0.1:2379.
+  host:
+    # host or ip e.g. http://172.20.128.89:2379
+    - http://etcd.host:2379         
        
   # dataPlane:
   #   controlPlane:
