@@ -24,7 +24,7 @@ deployment:
   #   mTLSCACertSecret: "ca-secret"
   #   # -- mTLS CA cert filename in mTLSCACertSecret
   #   mTLSCACert: "ca.pem"
-  etcd:
-    # -- install etcd(v3) by default, set false if do not want to install etcd(v3) together
-    enabled: false                 
+etcd:
+  # -- install etcd(v3) by default, set false if do not want to install etcd(v3) together
+  enabled: false                 
 #END
