@@ -7,7 +7,6 @@ deployment:
    dataPlane:
      controlPlane:
        host: ["https://apisix-control-plane.apisix.svc:9280"]
-       prefix: "/apisix"
  etcd:
    # -- install etcd(v3) by default, set false if do not want to install etcd(v3) together
    enabled: false            
