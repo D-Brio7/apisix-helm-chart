@@ -1,6 +1,12 @@
 deployment:
     mode: decoupled
-    role: data_plane
+    role: "data_plane"
     role_data_plane:
        config_provider: etcd
+
+deployment:
+    dataPlane:
+      controlPlane:
+        host: ["https://apisix-control-plane.apisix.svc:9280"]
+        prefix: "/apisix"
 #END
