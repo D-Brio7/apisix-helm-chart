@@ -1,8 +1,8 @@
 deployment:
   mode: decoupled
   role: "data_plane"
-  role_data_plane:
-    config_provider: etcd
+  # role_data_plane:
+  #   config_provider: etcd
        
   # dataPlane:
   #   controlPlane:
