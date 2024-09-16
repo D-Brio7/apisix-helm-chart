@@ -7,7 +7,7 @@ deployment:
   dataPlane:
     controlPlane:
       # -- The hosts of the control_plane used by the data_plane
-      host: ["http://apisix-cp.apisix.svc:9180"]
+      host: ["http://apisix-cp.apisix.svc:9280"]
       # -- The prefix of the control_plane used by the data_plane
       prefix: "/apisix"
       # -- Timeout when the data plane connects to the control plane
