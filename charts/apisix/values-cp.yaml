@@ -1,41 +1,4 @@
 deployment:
-    mode: decoupled
-    role: "control_plane"
-
-   # -- used for control_plane deployment mode
-   controlPlane:
-    # -- conf Server address
-    confServerPort: "9280"
-    # -- secret name used by conf Server
-    certsSecret: ""
-    # -- conf Server CA cert name in certsSecret
-    cert: ""
-    # -- conf Server cert key name in certsSecret
-    certKey: ""
-    certsSecret: "cp-secret"
-    # -- conf Server CA cert name
-    cert: "tls.crt"
-    # -- conf Server cert key name
-    certKey: "tls.key"     
-
-   # -- used for data_plane deployment mode
-   dataPlane:
-   # -- certs used for certificates in decoupled mode
-   certs:
-     # -- secret name used for decoupled mode
-    certsSecret: ""
-    certsSecret: "client-secret"
-     # -- cert name in certsSecret
-    cert: ""
-    cert: "tls.crt"
-     # -- cert key in certsSecret
-    cert_key: ""
-    cert_key: "tls.key"
- 
-     # -- trusted_ca_cert name in certsSecret
-    mTLSCACertSecret: ""
-    mTLSCACertSecret: "ca-secret"
-     # -- mTLS CA cert filename in mTLSCACertSecret
-    mTLSCACert: ""
-    mTLSCACert: "ca.pem"    
+  mode: decoupled
+  role: "control_plane" 
 #END
