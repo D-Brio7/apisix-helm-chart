@@ -16,7 +16,6 @@ deployment:
      cert: "tls.crt"
      # -- cert key in certsSecret
      cert_key: "tls.key"
- 
      # -- trusted_ca_cert name in certsSecret
      mTLSCACertSecret: "ca-secret"
      # -- mTLS CA cert filename in mTLSCACertSecret
