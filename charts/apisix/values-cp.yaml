@@ -12,4 +12,18 @@ deployment:
     cert: "tls.crt"
     # -- conf Server cert key name
     certKey: "tls.key"
+
+  # -- certs used for certificates in decoupled mode
+  certs:
+    # -- secret name used for decoupled mode
+    certsSecret: "client-secret"
+    # -- cert name in certsSecret
+    cert: "tls.crt"
+    # -- cert key in certsSecret
+    cert_key: "tls.key"
+ 
+    # -- trusted_ca_cert name in certsSecret
+    mTLSCACertSecret: "ca-secret"
+    # -- mTLS CA cert filename in mTLSCACertSecret
+    mTLSCACert: "ca.pem"    
 #END
