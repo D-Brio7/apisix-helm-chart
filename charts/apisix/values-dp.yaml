@@ -1,13 +1,13 @@
 deployment:
-    mode: decoupled
-    role: "data_plane"
-    role_data_plane:
-       config_provider: etcd
+   mode: decoupled
+   role: "data_plane"
+   role_data_plane:
+     config_provider: etcd
        
-    dataPlane:
-      controlPlane:
-        host: ["https://apisix-control-plane.apisix.svc:9280"]
-        prefix: "/apisix"
+   dataPlane:
+     controlPlane:
+       host: ["https://apisix-control-plane.apisix.svc:9280"]
+       prefix: "/apisix"
 
    certs:
      # -- secret name used for decoupled mode
