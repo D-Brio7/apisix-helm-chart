@@ -1,3 +1,7 @@
+env:
+    adc_backend: apisix
+    adc_server: http://localhost:9180
+
 deployment:
     role: control_plane
     role_control_plane:
