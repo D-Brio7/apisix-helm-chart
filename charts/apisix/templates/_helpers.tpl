@@ -157,3 +157,40 @@ Key to use to fetch viewer token from secret
 {{- "viewer" }}
 {{- end }}
 {{- end }}
+
+{{/*
+Create VirtualService resource for a Kong service
+*/}}
+{{- define "kong.virtualservice" -}} 
+{{- $servicePort := .virtualservice.servicePort -}}
+{{- $path := .virtualservice.path -}}
+{{- $hostname := .virtualservice.hostname -}}
+{{- $gateway := .virtualservice.gateway -}}
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: {{ .fullName }}-{{ .serviceName }}
+  namespace: {{ .namespace }}
+  labels:
+  {{- .metaLabels | nindent 4 }}
+  {{- if .virtualservice.annotations }}
+  annotations:
+    {{- range $key, $value := .virtualservice.annotations }}
+    {{ $key }}: {{ $value | quote }}
+    {{- end }}
+  {{- end }}
+spec:
+  gateways:
+  - {{ $gateway }}
+  hosts:
+  - {{ $hostname }}
+  http:
+  - match:
+    - uri:
+        prefix: {{ $path }}
+    route:
+    - destination:
+        host: {{ .fullName }}-{{ .serviceName }}
+        port:
+          number: {{ $servicePort }}
+{{- end -}}
