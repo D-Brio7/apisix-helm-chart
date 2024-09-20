@@ -9,6 +9,7 @@ deployment:
        timeout: 30
 
 dashboard:
+  type: ClusterIP
   enabled: true
   config:
     conf:
@@ -17,3 +18,12 @@ dashboard:
         endpoints:
           - apisix-cp-etcd.apisix.svc:2379
         prefix: "/apisix"
+  http:
+    enabled: true
+  virtualservice:
+    enabled: true
+    servicePort: 80
+    hostname: localhost
+    path: /
+    gateway: dashboard-gateway
+    annotations: {}
