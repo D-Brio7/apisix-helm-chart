@@ -1,0 +1,26 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+ name: dashboard-gateway
+spec:
+ selector:
+   istio: ingressgateway # use istio default controller
+ servers:
+ - port:
+     number: 80
+     name: http
+     protocol: HTTP
+   hosts:
+   - loclhost
+   # tls:
+      # httpsRedirect: true
+ # - port:
+ #     number: 445
+ #     name: https
+ #     protocol: HTTPS
+ #   hosts:
+ #   - qa-kong-manager.crisil.local
+ #   tls:
+ #     mode: SIMPLE
+ #     credentialName: crisil-tls
+{{- end }}
