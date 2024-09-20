@@ -161,7 +161,7 @@ Key to use to fetch viewer token from secret
 {{/*
 Create VirtualService resource for a Kong service
 */}}
-{{- define "kong.virtualservice" -}} 
+{{- define "apisix.virtualservice" -}} 
 {{- $servicePort := .virtualservice.servicePort -}}
 {{- $path := .virtualservice.path -}}
 {{- $hostname := .virtualservice.hostname -}}
