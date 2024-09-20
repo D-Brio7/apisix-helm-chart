@@ -131,7 +131,15 @@ service:
   # -- Service type
   type: ClusterIP
   # -- Service HTTP port
-  port: 80
+  http:
+    enabled: true
+  virtualservice:
+    enabled: true
+    servicePort: 80
+    hostname: localhost
+    path: /
+    gateway: dashboard-gateway
+    annotations: {}
 
 ingress:
   # -- Set to true to enable ingress record generation
