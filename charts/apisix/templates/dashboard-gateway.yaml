@@ -23,4 +23,3 @@ spec:
  #   tls:
  #     mode: SIMPLE
  #     credentialName: crisil-tls
-{{- end }}
