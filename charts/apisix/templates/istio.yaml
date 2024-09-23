@@ -1,4 +1,4 @@
-{{- if (eq .Values.env.role "control_plane") }}
+{{- if (eq .Values.deployment.role "control_plane") }}
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
