@@ -20,10 +20,10 @@ dashboard:
         prefix: "/apisix"
   http:
     enabled: true
-  virtualservice:
-    enabled: true
-    servicePort: 80
-    hostname: localhost
-    path: /
-    gateway: dashboard-gateway
-    annotations: {}
+  # virtualservice:
+  #   enabled: true
+  #   servicePort: 80
+  #   hostname: localhost
+  #   path: /
+  #   gateway: dashboard-gateway
+  #   annotations: {}
